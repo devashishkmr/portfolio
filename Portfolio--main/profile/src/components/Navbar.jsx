@@ -8,6 +8,7 @@ const navItems = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Certifications", href: "#certifications" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -59,7 +60,7 @@ export default function Navbar() {
           whileTap={{ scale: 0.95 }}
           className={`text-lg font-semibold tracking-tight ${theme === 'dark' ? 'text-white' : 'text-slate-900'} relative group`}
         >
-          Sonu<span className={theme === 'dark' ? 'text-indigo-400' : 'text-indigo-600'}>.</span>
+           <span className={theme === 'dark' ? 'text-indigo-400' : 'text-indigo-600'}>.</span>
           <motion.span
             className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-indigo-400 to-purple-400"
             initial={{ width: 0 }}

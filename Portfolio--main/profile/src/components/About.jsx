@@ -3,6 +3,30 @@ import { useRef, useEffect, useState } from "react";
 import { useTheme } from "../ThemeContext";
 import { ExternalLink, Github } from "lucide-react";
 
+const EDUCATION_ENTRIES = [
+  {
+    institution: "Lovely Professional University",
+    degree: "Bachelor of Technology in Computer Science and Engineering",
+    duration: "Aug ’23 – Present",
+    location: "Phagwara, Punjab",
+    details: ["CGPA: 6.76"]
+  },
+  {
+    institution: "Mithila Public School",
+    degree: "Intermediate (PCM)",
+    duration: "Mar ’20 – May ’21",
+    location: "Forbis Ganj, Bihar",
+    details: ["Percentage: 74.6%"]
+  },
+  {
+    institution: "IHHS Academy",
+    degree: "Matriculation",
+    duration: "Mar ’18 – May ’19",
+    location: "Forbis Ganj, Bihar",
+    details: ["Percentage: 83.5%"]
+  }
+];
+
 function AnimatedCounter({ value, label, delay }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -149,7 +173,7 @@ export default function About() {
       {/* Stats */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
         {[
-          { value: "10+", label: "Projects", delay: 0.4 },
+          { value: "5+", label: "Projects", delay: 0.4 },
           { value: "5+", label: "Certifications", delay: 0.5 },
           { value: "3★", label: "HackerRank", delay: 0.6 },
           { value: "2027", label: "Grad Year", delay: 0.7 },
@@ -200,6 +224,27 @@ export default function About() {
           </motion.div>
         ))}
       </motion.div>
+
+      {/* Education */}
+      <section id="education" className="mt-16">
+        <div className={`rounded-2xl border p-8 backdrop-blur-sm ${theme === 'dark' ? 'bg-slate-900/30 border-white/10' : 'bg-slate-50 border-slate-200'}`}>
+          <h2 className={`text-3xl font-bold mb-6 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+            Education
+          </h2>
+          <div className="space-y-6">
+            {EDUCATION_ENTRIES.map((item, idx) => (
+              <div key={idx} className={`rounded-xl border p-5 transition hover:border-indigo-300 ${theme === 'dark' ? 'border-white/10 bg-slate-950/60' : 'border-slate-200 bg-white/90'}`}>
+                <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-indigo-300' : 'text-indigo-600'}`}>{item.institution}</h3>
+                <p className={`text-sm ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>{item.location} • {item.duration}</p>
+                <p className={`text-base font-medium mt-1 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{item.degree}</p>
+                <ul className={`mt-2 pl-5 list-disc ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+                  {item.details.map((detail, detailIdx) => <li key={detailIdx}>{detail}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
     </section>
   );

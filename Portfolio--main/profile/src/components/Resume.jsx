@@ -9,6 +9,30 @@ const RESUME_DATA = {
   downloadUrl: "/Devashish-Kumar-Resume.pdf",
 };
 
+const EDUCATION = [
+  {
+    institution: "Lovely Professional University",
+    degree: "Bachelor of Technology in Computer Science and Engineering",
+    duration: "Aug ’23 – Present",
+    location: "Phagwara, Punjab",
+    details: ["CGPA: 6.76"]
+  },
+  {
+    institution: "Mithila Public School",
+    degree: "Intermediate (PCM)",
+    duration: "Mar ’20 – May ’21",
+    location: "Forbis Ganj, Bihar",
+    details: ["Percentage: 74.6%"]
+  },
+  {
+    institution: "IHHS Academy",
+    degree: "Matriculation",
+    duration: "Mar ’18 – May ’19",
+    location: "Forbis Ganj, Bihar",
+    details: ["Percentage: 83.5%"]
+  }
+];
+
 export default function ResumePage() {
   const { theme } = useTheme();
 
@@ -276,6 +300,37 @@ export default function ResumePage() {
             and solving complex problems through code. Currently open to exciting opportunities
             and collaborations.
           </p>
+        </div>
+
+        <div
+          className={`mt-8 rounded-2xl border p-8 ${
+            theme === "dark"
+              ? "bg-slate-900/30 border-white/10"
+              : "bg-slate-50 border-slate-200"
+          }`}
+        >
+          <h2
+            className={`text-2xl font-bold mb-4 ${
+              theme === "dark" ? "text-white" : "text-slate-900"
+            }`}
+          >
+            Education
+          </h2>
+          {EDUCATION.map((item, idx) => (
+            <div key={idx} className="mb-6">
+              <h3 className={`text-xl font-semibold ${theme === "dark" ? "text-indigo-300" : "text-indigo-600"}`}>
+                {item.degree}
+              </h3>
+              <p className={`text-sm font-medium ${theme === "dark" ? "text-slate-300" : "text-slate-600"}`}>
+                {item.institution} • {item.location} • {item.duration}
+              </p>
+              <ul className={`mt-2 pl-5 list-disc ${theme === "dark" ? "text-slate-400" : "text-slate-600"}`}>
+                {item.details.map((detail, i) => (
+                  <li key={i}>{detail}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </motion.div>
     </motion.div>

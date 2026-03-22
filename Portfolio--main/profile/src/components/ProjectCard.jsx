@@ -90,7 +90,7 @@ export default function ProjectCard({
 
       {/* Actions */}
       <div className="relative z-10 flex flex-wrap gap-3 text-sm font-semibold">
-        {demoLink && (
+        {/* {demoLink && (
           <motion.a
             href={demoLink}
             target="_blank"
@@ -98,8 +98,8 @@ export default function ProjectCard({
             whileHover={{ scale: 1.08, y: -2 }}
             whileTap={{ scale: 0.95 }}
             className="flex-1 relative rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-2.5 text-white transition hover:from-indigo-400 hover:to-purple-400 hover:shadow-lg hover:shadow-indigo-500/50 overflow-hidden group/btn text-center"
-          >
-            <motion.span
+          > */}
+            {/* <motion.span
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
               initial={{ x: '-100%' }}
               whileHover={{ x: '100%' }}
@@ -109,8 +109,8 @@ export default function ProjectCard({
               <ExternalLink size={16} aria-hidden="true" />
               <span>Live</span>
             </span>
-          </motion.a>
-        )}
+          </motion.a> */}
+        {/* )} */}
         
         {githubLink && (
           <motion.a

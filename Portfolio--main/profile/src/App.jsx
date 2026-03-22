@@ -13,12 +13,9 @@ import { useTheme } from "./ThemeContext";
 
 // Featured projects to display
 const FEATURED_REPOS = [
-  "DSA-Calculator",
-  "Customer-Intelligence-Revenue-Optimization-System",
-  "Job-Seekers-Website",
-  "Predictive-Analytics-Project-Diabetes-Prediction-using-Python",
-  "ai-travel",
-  "e-learning-platform-",
+  "Car-Sales-Dashboard",
+  "student-performance-prediction",
+  "Cloud-Vault",
 ];
 
 // Project descriptions mapping
@@ -30,11 +27,11 @@ const PROJECT_DESCRIPTIONS = {
     demoLink: "https://dsa-cal.onrender.com/",
     image: "/projects/dsa-calculator.png",
   },
-  "Customer-Intelligence-Revenue-Optimization-System": {
-    title: "Customer Intelligence Revenue Optimization",
+  "Car-Sales-Dashboard": {
+    title: "Car-Sales-Dashboard",
     description: "Industry-oriented Data Science project showcasing customer segmentation, revenue prediction, and churn analysis using advanced machine learning techniques.",
     tech: ["Python", "Scikit-Learn", "Machine Learning", "Data Analysis"],
-    demoLink: "#",
+    demoLink: "https://github.com/devashishkmr/Car-Sales-Dashboard",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
   },
   "Job-Seekers-Website": {
@@ -44,22 +41,22 @@ const PROJECT_DESCRIPTIONS = {
     demoLink: "https://job-seeker-website-black.vercel.app/",
     image: "/projects/job-seekers-website.png",
   },
-  "Predictive-Analytics-Project-Diabetes-Prediction-using-Python": {
-    title: "Diabetes Prediction System",
+  "student-performance-prediction": {
+    title: "student-performance-prediction",
     description: "Predictive analytics project using Pima Indians dataset. Implements multiple ML models including Logistic Regression, KNN, Decision Tree, and Naive Bayes with comprehensive evaluation metrics.",
     tech: ["Python", "Scikit-Learn", "Machine Learning", "Data Preprocessing"],
     demoLink: "#",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&h=300&fit=crop",
   },
-  "ai-travel": {
-    title: "AI Travel Booking Platform",
+  "Cloud-Vault": {
+    title: "Cloud-Vault",
     description: "Intelligent travel planning web application with flight search, booking management, and AI-powered recommendations for travel itineraries.",
     tech: ["HTML", "JavaScript", "React", "API Integration"],
     demoLink: "https://ai-travel-blue.vercel.app",
     image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop",
   },
-  "e-learning-platform-": {
-    title: "E-Learning Platform",
+  "e-learning-platform": {
+    title: "Claud",
     description: "Full-featured online learning platform with course management, interactive lessons, progress tracking, and user authentication.",
     tech: ["JavaScript", "React", "Node.js", "Database"],
     demoLink: "#",
@@ -139,8 +136,8 @@ export default function App() {
             title: customData.title || name.replace(/-/g, " "),
             description: customData.description || "GitHub Project",
             tech: customData.tech || ["Project"],
-            githubLink: `https://github.com/SonuKumar-suman09/${name}`,
-            demoLink: customData.demoLink || `https://github.com/SonuKumar-suman09/${name}`,
+            githubLink: `https://github.com/devashishkmr/${name}`,
+            demoLink: customData.demoLink || `https://github.com/devashishkmr/${name}`,
             image: customData.image || null,
           };
         });
