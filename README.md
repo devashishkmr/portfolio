@@ -23,4 +23,4 @@ This project is designed to showcase my skills, projects, certifications, and ac
 ## 🚀 Live Demo
 
 🔗 **Live Website:**  
-https://devashish123.vercel.app/
+https://myportfolio-six-psi-95.vercel.app/
